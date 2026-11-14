@@ -1,0 +1,27 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    image: salon-style-assistant:local
+    restart: unless-stopped
+    env_file: ../.runtime/deploy.env
+    volumes:
+      - salon-data:/data
+    expose: ["8000"]
+    security_opt: ["no-new-privileges:true"]
+  https:
+    image: caddy:2.10-alpine
+    restart: unless-stopped
+    environment:
+      BACKEND_HOSTNAME: ${BACKEND_HOSTNAME:?Set BACKEND_HOSTNAME}
+    ports: ["80:80", "443:443"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on: [app]
+volumes:
+  salon-data:
+  caddy-data:
+  caddy-config:

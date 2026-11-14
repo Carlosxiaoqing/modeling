@@ -1,0 +1,23 @@
+[
+  {
+    "method": "PUT",
+    "key": "salon-primary/c1/asset1",
+    "contentType": "image/jpeg",
+    "securityToken": null,
+    "authorization": "OSS4-HMAC-SHA256 Credential=syntheticAccessKey/20261111/cn-beijing/oss/aliyun_v4_request, Signature=2acb71237c31e43aac08962e3e05d65c51272a061724f2d548221459718093f5"
+  },
+  {
+    "method": "GET",
+    "key": "salon-primary/c1/你好 + !.jpg",
+    "contentType": null,
+    "securityToken": null,
+    "authorization": "OSS4-HMAC-SHA256 Credential=syntheticAccessKey/20261111/cn-beijing/oss/aliyun_v4_request, Signature=282b4c20eca74675f32b83546dcab0a1975df31ff9904128fc811adefa221e6a"
+  },
+  {
+    "method": "DELETE",
+    "key": "salon-primary/c1/asset1",
+    "contentType": null,
+    "securityToken": "synthetic-session-token",
+    "authorization": "OSS4-HMAC-SHA256 Credential=syntheticAccessKey/20261111/cn-beijing/oss/aliyun_v4_request, Signature=a046ae1afae95bdb453ebcf87a1640587946cda947576b7e0e01577416a8021c"
+  }
+]

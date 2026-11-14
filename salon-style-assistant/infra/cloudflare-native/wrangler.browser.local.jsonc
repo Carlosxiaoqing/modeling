@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "salon-browser-local",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-11-11",
+  "workers_dev": true,
+  "assets": {
+    "directory": "../../apps/web/dist",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "salon-native",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "VISION_ENDPOINT": "https://llm-dho81kzt15bmlomf.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/chat/completions",
+    "VISION_MODEL": "qwen3-vl-plus",
+    "IMAGE_MODEL": "doubao-seedream-5-0-flash-260915",
+    "WORKFLOW_MODE": "browser"
+  },
+  "observability": {
+    "enabled": false
+  }
+}

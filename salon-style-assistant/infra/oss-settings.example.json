@@ -1,0 +1,4 @@
+{
+  "OSS_BUCKET": "replace-with-your-private-bucket",
+  "OSS_REGION": "cn-beijing"
+}

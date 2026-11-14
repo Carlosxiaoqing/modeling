@@ -1,0 +1,3 @@
+# Set actual values through Cloudflare Worker bindings, never put model keys here.
+BACKEND_ORIGIN=https://backend.YOUR-DOMAIN.example
+ORIGIN_ACCESS_TOKEN=REPLACE_WITH_AT_LEAST_32_RANDOM_CHARACTERS

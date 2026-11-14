@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS browser_runs(id TEXT PRIMARY KEY,salon_id TEXT NOT NULL,version INTEGER NOT NULL DEFAULT 1,data TEXT NOT NULL,expires INTEGER NOT NULL);
+CREATE INDEX IF NOT EXISTS browser_expiry ON browser_runs(expires);
+CREATE TABLE IF NOT EXISTS secure_settings(id TEXT PRIMARY KEY,encrypted TEXT NOT NULL);
